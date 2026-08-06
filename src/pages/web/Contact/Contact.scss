@@ -1,0 +1,16 @@
+/* Alta especificidad (form.ui .field input.tc-newsletter-input) para
+   asegurarnos de ganarle a las reglas de color que trae Semantic UI,
+   sin importar el orden en que se importen los CSS. */
+
+form.ui .field input.tc-newsletter-input {
+  color: #1e293b !important;
+}
+
+form.ui .field input.tc-newsletter-input:-webkit-autofill,
+form.ui .field input.tc-newsletter-input:-webkit-autofill:hover,
+form.ui .field input.tc-newsletter-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #1e293b !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}

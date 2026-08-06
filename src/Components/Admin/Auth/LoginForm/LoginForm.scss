@@ -1,0 +1,131 @@
+// ============================================
+// LoginForm.scss - Solo campos y botón
+// La "card" contenedora la pone Auth.scss (.auth-box)
+// ============================================
+
+@import "../../../../scss/index.scss";
+
+$radius: 12px;
+$transition: all 0.25s ease;
+$text-muted: rgba($text-light, 0.6);
+
+.login-form {
+  &__header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $text-light;
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: $text-muted;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $text-muted;
+  }
+
+  input {
+    padding: 0.7rem 0.85rem;
+    background-color: rgba($text-light, 0.04);
+    color: $text-light;
+    border: 1px solid rgba($border-grey, 0.35);
+    border-radius: $radius;
+    font-size: 0.95rem;
+    transition: $transition;
+
+    &::placeholder {
+      color: rgba($text-light, 0.3);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+      background-color: rgba($primary, 0.06);
+      box-shadow: 0 0 0 3px rgba($primary, 0.18);
+    }
+
+    &.input-error {
+      border-color: $error;
+    }
+  }
+
+  .field-error {
+    font-size: 0.75rem;
+    color: $error;
+  }
+}
+
+.login-form__options {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.4rem;
+
+  a {
+    font-size: 0.8rem;
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.login-form__message {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 0;
+
+  &.error {
+    color: $error;
+  }
+
+  &.success {
+    color: $success;
+  }
+}
+
+.login-submit {
+  margin-top: 0.25rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, $primary, $primary-hover);
+  color: $text-light;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: $transition;
+  width: 100%;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
