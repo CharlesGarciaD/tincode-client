@@ -1,9 +1,9 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthProvider';
+import { AuthProvider } from './Context/AuthProvider';
 import { WebRouter } from './router/WebRouter';
 import { AdminRouter } from './router/AdminRouter';
-import { useAuth } from './hooks/useAuth';
+import { useAuth } from './Hooks/UseAuth';
 
 function AppContent() {
   const { checkingSession } = useAuth();

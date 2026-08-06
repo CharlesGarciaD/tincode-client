@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { AuthContext } from './AuthContext';
-import { loginRequest, registerRequest, refreshAccessTokenRequest } from '../services/authService';
+import { loginRequest, registerRequest, refreshAccessTokenRequest } from '../Services/AuthService';
 
 function isTokenExpired(token) {
   try {
