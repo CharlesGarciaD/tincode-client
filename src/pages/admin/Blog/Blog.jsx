@@ -4,7 +4,7 @@ import {
   deletePostRequest,
   POST_IMAGE_BASE_URL,
 } from "../../../Services/PostsService";
-import { PostFormModal } from "./PostFormModal";
+import { PostFormModal } from "./Postformmodal";
 import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Blog.scss";
 

@@ -1,6 +1,6 @@
 import { FooterInfo } from "./FooterInfo";
 import { FooterMenu } from "./FooterMenu";
-import { FooterNewsletter } from "./FooterNewsletter";
+import { FooterNewsletter } from "./Footernewsletter";
 import "./Footer.scss";
 
 export function Footer() {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import { PostImageUploader } from "./PostImageUploader";
-import { usePostValidation } from "./usePostValidation";
+import { PostImageUploader } from "./Postimageuploader";
+import { usePostValidation } from "./Usepostvalidation";
 import { createPostRequest, updatePostRequest, POST_IMAGE_BASE_URL } from "../../../Services/PostsService";
 import "./PostFormModal.scss";
 

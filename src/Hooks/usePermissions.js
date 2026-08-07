@@ -1,5 +1,5 @@
 // src/Hooks/usePermissions.js
-import { useAuth } from "./useAuth";
+import { useAuth } from "./UseAuth";
 
 // Define aquí qué rutas/acciones requiere cada rol
 const ROLE_HIERARCHY = {

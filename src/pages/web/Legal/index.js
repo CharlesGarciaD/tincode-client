@@ -1,3 +1,3 @@
 export { Terms } from "./Terms";
 export { Privacy } from "./Privacy";
-export { CookiesPolicy } from "./CookiesPolicy";
+export { CookiesPolicy } from "./Cookiespolicy";
