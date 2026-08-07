@@ -1,4 +1,4 @@
-import "./LegalPage.scss";
+import "./Legalpage.scss";
 
 /**
  * props:
