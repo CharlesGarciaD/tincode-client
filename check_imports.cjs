@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const codeExts = ['.js', '.jsx'];
 let errors = [];
 
 function walk(dir) {
@@ -10,29 +9,32 @@ function walk(dir) {
     if (fs.statSync(full).isDirectory()) {
       if (file === 'node_modules') continue;
       walk(full);
-    } else if (codeExts.includes(path.extname(file)) || file.endsWith('.scss') || file.endsWith('.css')) {
+    } else {
       checkFile(full);
     }
   }
 }
 
 function checkFile(filePath) {
+  const ext = path.extname(filePath);
+  if (!['.js', '.jsx', '.scss', '.css'].includes(ext)) return;
   const content = fs.readFileSync(filePath, 'utf8');
-  const regex = /(?:from\s+|@import\s+)['"](\.[^'"]+)['"]/g;
+  const regex = /(?:from\s+|@import\s+|import\s+)['"](\.[^'"]+)['"]/g;
   let match;
   while ((match = regex.exec(content)) !== null) {
     const importPath = match[1];
-    const resolved = path.resolve(path.dirname(filePath), importPath);
+    let resolved = path.resolve(path.dirname(filePath), importPath);
     const dir = path.dirname(resolved);
     const base = path.basename(resolved);
     if (!fs.existsSync(dir)) continue;
     const realFiles = fs.readdirSync(dir);
     const exactMatch = realFiles.find(f => f === base) || realFiles.find(f => path.parse(f).name === base);
+    if (exactMatch) continue;
     const caseInsensitiveMatch = realFiles.find(f => f.toLowerCase() === base.toLowerCase()) ||
       realFiles.find(f => path.parse(f).name.toLowerCase() === base.toLowerCase());
-    if (!exactMatch && caseInsensitiveMatch) {
+    if (caseInsensitiveMatch) {
       errors.push(`${filePath}: "${importPath}" -> real file is "${caseInsensitiveMatch}"`);
-    } else if (!exactMatch && !caseInsensitiveMatch) {
+    } else {
       errors.push(`${filePath}: "${importPath}" -> NOT FOUND at all in ${dir}`);
     }
   }

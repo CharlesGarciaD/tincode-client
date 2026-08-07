@@ -1,5 +1,5 @@
 import { useRef, useMemo, useEffect } from "react";
-import "./PostImageUploader.scss";
+import "./Postimageuploader.scss";
 
 /**
  * props:

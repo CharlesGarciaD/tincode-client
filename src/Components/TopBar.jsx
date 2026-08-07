@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "./Logo";
-import "./TopBar.scss";
+import "./Topbar.scss";
 
 const NAV_LINKS = [
   { label: "Inicio", to: "/" },
