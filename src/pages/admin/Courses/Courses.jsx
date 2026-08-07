@@ -5,7 +5,7 @@ import {
   deleteCourseRequest,
 } from "../../../Services/CoursesService";
 import { CourseFormModal } from "./CourseFormModal";
-import { usePermissions } from "../../../hooks/usePermissions";
+import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Courses.scss";
 
 const ITEMS_PER_PAGE = 6;

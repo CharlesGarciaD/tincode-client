@@ -1,4 +1,4 @@
-// src/hooks/usePermissions.js
+// src/Hooks/usePermissions.js
 import { useAuth } from "./useAuth";
 
 // Define aquí qué rutas/acciones requiere cada rol

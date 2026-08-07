@@ -1,6 +1,6 @@
 // src/router/RequireRole.jsx
 import { Navigate } from "react-router-dom";
-import { usePermissions } from "../hooks/usePermissions";
+import { usePermissions } from "../Hooks/usePermissions";
 
 export function RequireRole({ role, children }) {
   const { hasRole } = usePermissions();

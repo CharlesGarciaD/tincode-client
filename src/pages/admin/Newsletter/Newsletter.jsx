@@ -4,7 +4,7 @@ import {
   toggleNewsletterStatusRequest,
   deleteNewsletterEmailRequest,
 } from "../../../Services/NewsletterService";
-import { usePermissions } from "../../../hooks/usePermissions";
+import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Newsletter.scss";
 
 const ITEMS_PER_PAGE = 6;

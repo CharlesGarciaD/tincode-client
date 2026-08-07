@@ -5,7 +5,7 @@ import {
   POST_IMAGE_BASE_URL,
 } from "../../../Services/PostsService";
 import { PostFormModal } from "./PostFormModal";
-import { usePermissions } from "../../../hooks/usePermissions";
+import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Blog.scss";
 
 const ITEMS_PER_PAGE = 2;

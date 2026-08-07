@@ -3,7 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import logo from "../../assets/svg/tincode-white.svg";
 import { LogoutButton } from "../../Components/Admin/LogoutButton/LogoutButton";
 import { UserWelcome } from "../../Components/Admin/UserWelcome/UserWelcome";
-import { usePermissions } from "../../hooks/usePermissions";
+import { usePermissions } from "../../Hooks/usePermissions";
 import "./AdminLayout.scss";
 
 const navItems = [

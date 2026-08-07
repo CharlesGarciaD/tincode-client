@@ -6,7 +6,7 @@ import {
   AVATAR_BASE_URL,
 } from "../../../Services/UsersService";
 import { UserFormModal } from "./UserFormModal";
-import { usePermissions } from "../../../hooks/usePermissions";
+import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Users.scss";
 
 const USERS_PER_PAGE = 6;

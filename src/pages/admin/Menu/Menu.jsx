@@ -5,7 +5,7 @@ import {
   deleteMenuRequest,
 } from "../../../Services/MenusService";
 import { MenuFormModal } from "./MenuFormModal";
-import { usePermissions } from "../../../hooks/usePermissions";
+import { usePermissions } from "../../../Hooks/usePermissions";
 import "./Menu.scss";
 
 const ITEMS_PER_PAGE = 6;
