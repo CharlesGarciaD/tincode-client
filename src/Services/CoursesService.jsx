@@ -1,6 +1,6 @@
 import { apiFetch } from "./ApiClient";
 
-export const COURSE_IMAGE_BASE_URL = "http://localhost:3977/courses";
+export const COURSE_IMAGE_BASE_URL = "https://tincode-server.onrender.com/courses";
 
 async function handleResponse(res) {
   const data = await res.json();

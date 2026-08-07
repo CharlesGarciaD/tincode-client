@@ -2,7 +2,7 @@ import { apiFetch } from "./ApiClient";
 
 // Ajusta este puerto/host si tu servidor de imágenes está en otro lugar.
 // Las imágenes de posts se guardan en uploads/post/, servido como /post/<archivo>
-export const POST_IMAGE_BASE_URL = "http://localhost:3977/post";
+export const POST_IMAGE_BASE_URL = "https://tincode-server.onrender.com/post";
 
 async function handleResponse(res) {
   const data = await res.json();

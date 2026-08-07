@@ -19,7 +19,7 @@ function checkFile(filePath) {
   const ext = path.extname(filePath);
   if (!['.js', '.jsx', '.scss', '.css'].includes(ext)) return;
   const content = fs.readFileSync(filePath, 'utf8');
-  const regex = /(?:from\s+|@import\s+|import\s+)['"](\.[^'"]+)['"]/g;
+  const regex = /(?:from\s+|@import\s+|import\s+|url\()['"]?(\.[^'")\s]+)['"]?/g;
   let match;
   while ((match = regex.exec(content)) !== null) {
     const importPath = match[1];

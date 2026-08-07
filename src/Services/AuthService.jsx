@@ -1,5 +1,5 @@
 // src/services/authService.js
-const API_URL = 'http://localhost:3977/api/v1';
+const API_URL = 'https://tincode-server.onrender.com/api/v1';
 
 async function handleResponse(res) {
   const data = await res.json();

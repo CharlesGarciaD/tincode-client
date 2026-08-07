@@ -1,7 +1,7 @@
 // src/Services/UsersService.jsx
 import { apiFetch } from "./ApiClient";
 
-export const AVATAR_BASE_URL = "http://localhost:3977";
+export const AVATAR_BASE_URL = "https://tincode-server.onrender.com";
 
 async function handleResponse(res) {
   const data = await res.json();
