@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/svg/tincode-white.svg";
-import { useAuth } from "../../../hooks/useAuth";
+import { useAuth } from "../../../Hooks/UseAuth";
 import "./Auth.scss";
 
 export function Auth() {

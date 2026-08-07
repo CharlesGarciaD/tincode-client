@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useAuth } from "../../../../hooks/useAuth"; // ajusta la ruta según profundidad real
+import { useAuth } from "../../../../Hooks/UseAuth"; // ajusta la ruta según profundidad real
 import "./LoginForm.scss";
 
 const validationSchema = Yup.object({

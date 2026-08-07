@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { AdminLayout } from "../layouts/AdminLayout/AdminLayout";
 import { Auth } from "../Components/Admin/Auth";
 import { Users, Blog, Courses, Menu, Newsletter } from "../pages/admin";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../Hooks/UseAuth";
 import { RequireRole } from "./RequireRole";
 
 export function AdminRouter() {

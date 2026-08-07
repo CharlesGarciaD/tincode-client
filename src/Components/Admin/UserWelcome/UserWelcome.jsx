@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useAuth } from "../../../hooks/useAuth";
+import { useAuth } from "../../../Hooks/UseAuth";
 import "./UserWelcome.scss";
 
 export function UserWelcome() {

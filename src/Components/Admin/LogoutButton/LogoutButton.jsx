@@ -1,6 +1,6 @@
 // src/Components/Admin/LogoutButton/LogoutButton.jsx
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../../hooks/useAuth";
+import { useAuth } from "../../../Hooks/UseAuth";
 import "./LogoutButton.scss";
 
 export function LogoutButton() {

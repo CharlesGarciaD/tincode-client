@@ -1,5 +1,5 @@
 // src/Components/TestAuth.jsx (temporal, lo borras después)
-//import { useAuth } from '../hooks/useAuth';
+//import { useAuth } from '../Hooks/UseAuth';
 
 /*function TestAuth() {
   const { user, isAuthenticated, login, logout } = useAuth();
